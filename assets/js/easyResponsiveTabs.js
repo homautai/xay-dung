@@ -1,37 +1,41 @@
 // Easy Responsive Tabs Plugin
 // Author: Samson.Onna <Email : samson3d@gmail.com> 
-(function ($) {
+(function($) {
     $.fn.extend({
-        easyResponsiveTabs: function (options) {
+        easyResponsiveTabs: function(options) {
             //Set the default values, use comma to separate the settings, example:
             var defaults = {
-                type: 'default', //default, vertical, accordion;
-                width: 'auto',
-                fit: true,
-                closed: false,
-                tabidentify: '',
-                activetab_bg: 'white',
-                inactive_bg: '#F5F5F5',
-                active_border_color: '#c1c1c1',
-                active_content_border_color: '#c1c1c1',
-                activate: function () {
+                    type: 'default', //default, vertical, accordion;
+                    width: 'auto',
+                    fit: true,
+                    closed: false,
+                    tabidentify: '',
+                    activetab_bg: 'white',
+                    inactive_bg: '#F5F5F5',
+                    active_border_color: '#c1c1c1',
+                    active_content_border_color: '#c1c1c1',
+                    activate: function() {}
                 }
-            }
-            //Variables
+                //Variables
             var options = $.extend(defaults, options);
-            var opt = options, jtype = opt.type, jfit = opt.fit, jwidth = opt.width, vtabs = 'vertical', accord = 'accordion';
+            var opt = options,
+                jtype = opt.type,
+                jfit = opt.fit,
+                jwidth = opt.width,
+                vtabs = 'vertical',
+                accord = 'accordion';
             var hash = window.location.hash;
             var historyApi = !!(window.history && history.replaceState);
 
             //Events
-            $(this).bind('tabactivate', function (e, currentTab) {
+            $(this).bind('tabactivate', function(e, currentTab) {
                 if (typeof options.activate === 'function') {
                     options.activate.call(currentTab, e)
                 }
             });
 
             //Main function
-            this.each(function () {
+            this.each(function() {
                 var $respTabs = $(this);
                 var $respTabsList = $respTabs.find('ul.resp-tabs-list.' + options.tabidentify);
                 var respTabsId = $respTabs.attr('id');
@@ -71,7 +75,7 @@
                 });
 
                 var itemCount = 0;
-                $respTabs.find('.resp-accordion').each(function () {
+                $respTabs.find('.resp-accordion').each(function() {
                     $tabItemh2 = $(this);
                     var $tabItem = $respTabs.find('.resp-tab-item:eq(' + itemCount + ')');
                     var $accItem = $respTabs.find('.resp-accordion:eq(' + itemCount + ')');
@@ -84,7 +88,7 @@
                 //Assigning the 'aria-controls' to Tab items
                 var count = 0,
                     $tabContent;
-                $respTabs.find('.resp-tab-item').each(function () {
+                $respTabs.find('.resp-tab-item').each(function() {
                     $tabItem = $(this);
                     $tabItem.attr('aria-controls', options.tabidentify + '_tab_item-' + (count));
                     $tabItem.attr('role', 'tab');
@@ -95,7 +99,7 @@
 
                     //Assigning the 'aria-labelledby' attr to tab-content
                     var tabcount = 0;
-                    $respTabs.find('.resp-tab-content.' + options.tabidentify).each(function () {
+                    $respTabs.find('.resp-tab-content.' + options.tabidentify).each(function() {
                         $tabContent = $(this);
                         $tabContent.attr('aria-labelledby', options.tabidentify + '_tab_item-' + (tabcount)).css({
                             'border-color': options.active_border_color
@@ -135,20 +139,20 @@
                 }
                 //assign proper classes for when tabs mode is activated before making a selection in accordion mode
                 else {
-                   // $($respTabs.find('.resp-tab-content.' + options.tabidentify)[tabNum]).addClass('resp-accordion-closed'); //removed resp-tab-content-active
+                    // $($respTabs.find('.resp-tab-content.' + options.tabidentify)[tabNum]).addClass('resp-accordion-closed'); //removed resp-tab-content-active
                 }
 
                 //Tab Click action function
-                $respTabs.find("[role=tab]").each(function () {
+                $respTabs.find("[role=tab]").each(function() {
 
                     var $currentTab = $(this);
-                    $currentTab.click(function () {
+                    $currentTab.click(function() {
 
                         var $currentTab = $(this);
                         var $tabAria = $currentTab.attr('aria-controls');
 
                         if ($currentTab.hasClass('resp-accordion') && $currentTab.hasClass('resp-tab-active')) {
-                            $respTabs.find('.resp-tab-content-active.' + options.tabidentify).slideUp('', function () {
+                            $respTabs.find('.resp-tab-content-active.' + options.tabidentify).slideUp('', function() {
                                 $(this).addClass('resp-accordion-closed');
                             });
                             $currentTab.removeClass('resp-tab-active').css({
@@ -198,12 +202,10 @@
                                 var re = new RegExp(respTabsId + "[0-9]+");
                                 if (currentHash.match(re) != null) {
                                     newHash = currentHash.replace(re, newHash);
-                                }
-                                else {
+                                } else {
                                     newHash = currentHash + "|" + newHash;
                                 }
-                            }
-                            else {
+                            } else {
                                 newHash = '#' + newHash;
                             }
 
@@ -214,11 +216,10 @@
                 });
 
                 //Window resize function                   
-                $(window).resize(function () {
+                $(window).resize(function() {
                     $respTabs.find('.resp-accordion-closed').removeAttr('style');
                 });
             });
         }
     });
 })(jQuery);
-
