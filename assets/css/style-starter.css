@@ -470,6 +470,10 @@ i.real-estate {}
     border: 1px solid #ff4c4c;
 }
 
+.main-content {
+    padding: 48px 0px;
+}
+
 .w3-categories h3 {
     color: #0099e5;
     font-size: 40px;
@@ -479,11 +483,6 @@ i.real-estate {}
 
 .w3-categories h3:before,
 .w3-categories h3:after {
-    width: 170px;
-    height: 1px;
-    display: inline-block;
-    vertical-align: middle;
-    content: "";
     background: #000;
     margin: 0 1%;
 }
@@ -13839,6 +13838,9 @@ h3.hny-title.two {
         font-size: 30px;
         line-height: 35px;
     }
+    .focus-grid {
+        padding: 0 10px;
+    }
 }
 
 @media (max-width: 768px) {
@@ -13869,11 +13871,21 @@ h3.hny-title.two {
     .focus-layout {
         padding: 16px 5px 16px 5px;
     }
+    .w3-categories h3:before,
+    .w3-categories h3:after {
+        width: 50px;
+    }
 }
 
 @media (max-width: 384px) {
     .focus-layout h4 {
         font-size: 16px;
+    }
+    .w3-categories h3 {
+        font-size: 30px;
+    }
+    .w3-categories h3 {
+        margin-bottom: 20px;
     }
 }
 
@@ -13896,6 +13908,10 @@ h3.hny-title.two {
     p {
         font-size: 16px;
         line-height: 26px;
+    }
+    .w3-categories h3:before,
+    .w3-categories h3:after {
+        width: 95px;
     }
 }
 
@@ -14383,15 +14399,6 @@ nav ul li a:hover {
     }
     .focus-layout {
         padding: 16px 0px 16px 0;
-    }
-}
-
-@media (max-width: 480px) {
-    .focus-image i {
-        font-size: 35px;
-        width: 75px;
-        height: 75px;
-        line-height: 75px;
     }
 }
 
@@ -14997,6 +15004,11 @@ button.owl-next {
         width: 85px;
         height: 85px;
         line-height: 85px;
+    }
+    .w3-categories h3,
+    .w3l-popular-ads h3,
+    .w3layouts-partners h3 {
+        font-size: 38px;
     }
 }
 
@@ -15952,6 +15964,10 @@ h3.title-spe {
 }
 
 @media (max-width: 480px) {
+    .focus-grid {
+        width: 45%;
+        margin: 2.5% 2.5%;
+    }
     .w3l-testimonials .img-circle {
         width: 100px;
         height: 100px;
@@ -15964,6 +15980,19 @@ h3.title-spe {
     }
     .w3l-testimonials .name {
         font-size: 18px;
+    }
+    .focus-image i {
+        font-size: 35px;
+        width: 75px;
+        height: 75px;
+        line-height: 75px;
+    }
+    .w3-categories h3:before,
+    .w3-categories h3:after {
+        width: 70px;
+    }
+    .w3-categories h3 {
+        font-size: 32px;
     }
 }
 
@@ -16050,6 +16079,23 @@ h3.title-spe {
 @media all and (max-width: 320px) {
     .w3l-services2 .cwp23-text-cols {
         grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 320px) {
+    .focus-grid {
+        width: 80%;
+        margin: 5% 10%;
+    }
+    .w3-categories h3,
+    .w3l-popular-ads h3,
+    .w3layouts-partners h3,
+    .agile-trend-ads h2 {
+        font-size: 28px;
+    }
+    .w3-categories h3:before,
+    .w3-categories h3:after {
+        width: 25px;
     }
 }
 
@@ -16144,11 +16190,34 @@ h3.title-spe {
         grid-template-columns: 1fr;
         grid-gap: 30px;
     }
+    .focus-grid {
+        float: left;
+        margin: 1.5% 1.5%;
+    }
+    .w3-categories h3 {
+        margin-bottom: 35px;
+    }
 }
 
 @media (max-width: 900px) {
     .contact p {
         font-size: 17px;
+    }
+    .w3-categories h3,
+    .w3l-popular-ads h3,
+    .w3layouts-partners h3 {
+        font-size: 36px;
+    }
+}
+
+@media (max-width: 667px) {
+    .w3-categories h3:before,
+    .w3-categories h3:after {
+        width: 120px;
+        margin: 0 3%;
+    }
+    .w3-categories h3 {
+        font-size: 34px;
     }
 }
 
