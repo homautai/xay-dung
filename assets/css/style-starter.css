@@ -16357,6 +16357,35 @@ form.signin-form {
     transition: 0.3s ease-out;
 }
 
+.w3l-footer-29-main #movetop2 {
+    display: none;
+    position: fixed;
+    bottom: 45px;
+    left: 15px;
+    z-index: 99;
+    font-size: 24px;
+    cursor: pointer;
+    color: #fff;
+    width: 100px;
+    height: 100px;
+    line-height: 35px;
+    border-width: initial;
+    border-style: none;
+    border-color: initial;
+    -o-border-image: initial;
+    border-image: initial;
+    outline: none;
+    /* background: url(../images/hl1.svg) no-repeat center; */
+    border-radius: 50%;
+    transition: all 0.5s ease-out 0s;
+}
+
+.w3l-footer-29-main #movetop2:hover {
+    transform: translate3d(0, -5px, 0);
+    -webkit-transform: translate3d(0, -5px, 0);
+    transition: 0.3s ease-out;
+}
+
 .w3l-footer-29-main {
     background: #222;
 }
