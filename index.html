@@ -13,7 +13,18 @@
     <link rel="stylesheet" href="assets/css/all.css">
 
 
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SJXHN69C9V"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
 
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'G-SJXHN69C9V');
+    </script>
 
 
 </head>
@@ -720,8 +731,14 @@
 
         <!-- move top -->
         <button onclick="topFunction()" id="movetop" title="Go to top">
-      <span class="fa fa-angle-up"></span>
-    </button>
+        <span class="fa fa-angle-up"></span></button>
+        <div id="movetop2" title="Go to top">
+            <img src="assets/images/hl2.svg" alt="">
+            <a href="tel:0965125441" id="callnowbutton" onclick="ga('send', 'event', 'Contact', 'Call Now Button', 'Phone');return gtag_report_conversion('tel:0965125441');"><span style="
+                background-color: #fe5a0e;
+                color: white;
+            ">0965125441</span></a>
+        </div>
         <script>
             // When the user scrolls down 20px from the top of the document, show the button
             window.onscroll = function() {
@@ -731,8 +748,10 @@
             function scrollFunction() {
                 if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
                     document.getElementById("movetop").style.display = "block";
+                    document.getElementById("movetop2").style.display = "block";
                 } else {
                     document.getElementById("movetop").style.display = "none";
+                    document.getElementById("movetop2").style.display = "none";
                 }
             }
 

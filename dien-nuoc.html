@@ -10,12 +10,23 @@ Author URL: http://w3layouts.com
     <meta charset="utf-8">
     <meta name="description" content="Công Ty TNHH - TM - Dịch Vụ Xây Dựng Trung Phát chuyên nhận xây dựng nhà ở dân dụng, sửa chữa nhà ở, Chống
       thấm, Chống dột dột, Điện nước, Thạch cao, Đèn trang trí.....">
-    <title>Công Ty TNHH - TM - Dịch Vụ Xây Dựng Trung Phát chuyên nhận xây dựng nhà ở dân dụng, sửa chữa nhà ở, Chống thấm, Chống dột dột, Điện nước, Thạch cao, Đèn trang trí.....</title>
+    <title>Điện Nước Giá Rẽ Hồ Chí Minh chuyên xây dựng nhà ở dân dụng, sửa chữa nhà ở, Chống thấm, Chống dột dột, Điện nước, Thạch cao, Đèn trang trí.....</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Template CSS -->
     <link rel="stylesheet" href="assets/css/style-starter.css">
     <link rel="stylesheet" href="assets/css/style-starter.css">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SJXHN69C9V"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
 
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'G-SJXHN69C9V');
+    </script>
 </head>
 
 <body>
@@ -154,6 +165,7 @@ Author URL: http://w3layouts.com
                         </a>
                     </div>
                 </div>
+
                 <div class="col-lg-4 col-md-6">
                     <div class="s-block">
                         <a href="quy-trinh-dien-nuoc.html" class="d-block">
@@ -208,12 +220,13 @@ Author URL: http://w3layouts.com
                         </a>
                     </div>
                 </div>
+
                 <div class="col-lg-4 col-md-6">
                     <div class="s-block">
                         <a href="quy-trinh-dien-nuoc.html" class="d-block">
                             <img src="assets/images/image3.jpg" alt="" class="img-fluid">
                             <div class="p-4">
-                                <h3 class="mb-3">Sửa Điện Trung Tâm TP Hồ Chí Minh</h3>
+                                <h3 class="mb-3">Sửa Chữa Điện Nước Tại Nhà</h3>
                                 <p class="">Chỉ sau 20 phút nhân viên kỹ thuật đã có mặt, gọi cho chúng tôi ngay.
                                 </p>
                                 <ul>
@@ -554,8 +567,14 @@ Author URL: http://w3layouts.com
 
         <!-- move top -->
         <button onclick="topFunction()" id="movetop" title="Go to top">
-      <span class="fa fa-angle-up"></span>
-    </button>
+        <span class="fa fa-angle-up"></span></button>
+        <div id="movetop2" title="Go to top">
+            <img src="assets/images/hl2.svg" alt="">
+            <a href="tel:0965125441" id="callnowbutton" onclick="ga('send', 'event', 'Contact', 'Call Now Button', 'Phone');return gtag_report_conversion('tel:0965125441');"><span style="
+                background-color: #fe5a0e;
+                color: white;
+            ">0965125441</span></a>
+        </div>
         <script>
             // When the user scrolls down 20px from the top of the document, show the button
             window.onscroll = function() {
@@ -565,8 +584,10 @@ Author URL: http://w3layouts.com
             function scrollFunction() {
                 if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
                     document.getElementById("movetop").style.display = "block";
+                    document.getElementById("movetop2").style.display = "block";
                 } else {
                     document.getElementById("movetop").style.display = "none";
+                    document.getElementById("movetop2").style.display = "none";
                 }
             }
 
