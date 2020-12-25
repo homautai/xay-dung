@@ -1,4 +1,5 @@
 # Group 1
 User-agent: *
-
+Disallow: /wp-admin/
+Allow: /wp-admin/admin-ajax.php
 Sitemap: http://xaydunggiare.tk/sitemap.xml
