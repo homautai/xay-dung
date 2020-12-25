@@ -1,0 +1,6 @@
+# Group 1
+User-agent: *
+Disallow: /*
+
+
+Sitemap: http://xaydunggiare.tk/sitemap.xml
